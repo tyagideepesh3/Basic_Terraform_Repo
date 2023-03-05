@@ -59,7 +59,7 @@ module "blog_sg" {
 resource "aws_security_group" "blog" {
   name        = "blog"
   description = "Allow Http and Https in and allow everything out"
-  vpc_id      = module.blog_sg.vpc_id
+  vpc_id      = module.blog_vpc.vpc_id
 }
 resource "aws_security_group_rule" "http_in" {
   type              = "ingress"
